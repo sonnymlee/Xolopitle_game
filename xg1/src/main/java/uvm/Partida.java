@@ -6,7 +6,6 @@ public class Partida {
 //atributos
 
 private int id;
-public enum Estado {NO_INICIADA,EN_CURSO,PAUSADA,FINALIZADA};
 private Estado estadoActual;
 private String name;
 // Conecto las clases Dummy
