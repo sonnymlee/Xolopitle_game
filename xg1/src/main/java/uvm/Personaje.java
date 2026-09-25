@@ -38,7 +38,7 @@ public class Personaje {
     
     public boolean esAliado() {return bando == Bando.ALIADO;}
     public boolean esEnemigo() {return bando == Bando.ENEMIGO;}
-    public void ajustarLeatad(int cambio){
+    public void ajustarLealtad(int cambio){
         this.lealtad = this.lealtad + cambio;
     }
     public void cambiarBando(Bando nBando){
