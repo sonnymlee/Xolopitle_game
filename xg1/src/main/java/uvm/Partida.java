@@ -35,6 +35,7 @@ public Partida (int id, String name, EstadoJugadorActual jugador, Localizacion l
 
     //getters y setters
     public int getId(){return id;} public void setId(int id){this.id=id;}
+    public String getName(){return name;} public void setName(String name){this.name=name;}
     public Estado getEstadoActual(){return estadoActual;} public void setEstadoActual(Estado estadoActual){this.estadoActual=estadoActual;}
     public EstadoJugadorActual getJugador(){return jugador;} public void setJugador(EstadoJugadorActual jugador){this.jugador=jugador;}
     public ArrayList<Personaje> getPersonajes(){return personajes;} public void setPersonajes(ArrayList<Personaje> personajes){this.personajes=personajes;}
@@ -42,7 +43,7 @@ public Partida (int id, String name, EstadoJugadorActual jugador, Localizacion l
     public Localizacion getLocalizacionActual(){return localizacionActual;} public void setLocalizacionActual(Localizacion localizacionActual){this.localizacionActual=localizacionActual;}
     public InventarioRecursos getRecursos(){return recursos;} public void setRecursos(InventarioRecursos recursos){this.recursos=recursos;}
     public EstadoPartidaActual getEstadoPartidaActual(){return estadoDeLaPartida;} public void setEstadoPartidaActual(EstadoPartidaActual estadoPartidaActual){
-        this.estadoActual=estadoActual;}
+        this.estadoDeLaPartida=estadoPartidaActual;}
 
     //metodos de actualizar y agregar datos
     public void iniciarPartida(){

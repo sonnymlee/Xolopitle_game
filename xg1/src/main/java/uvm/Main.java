@@ -1,5 +1,7 @@
 package uvm;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Personaje lider = new Personaje(200, "dss", "lider", Bando.ALIADO, 20, 50, false);
@@ -76,5 +78,37 @@ public class Main {
 
         System.out.println("Estado despues de finalizar: " + estadoPartida.getEstado());
         System.out.println("Ha terminado: " + estadoPartida.haTerminado());
+
+        // --- PRUEBA DE PARTIDA (Integracion) ---
+        System.out.println("\n--- Prueba de Partida ---");
+        
+        // Usamos el 'jugador' y 'l1' (Localizacion) que ya declaraste arriba
+        Partida partida1 = new Partida(1, "Partida Guardada 1", jugador, l1);
+        
+        System.out.println("Estado de partida nueva: " + partida1.getEstadoActual());
+        partida1.iniciarPartida();
+        System.out.println("Estado tras iniciarPartida(): " + partida1.getEstadoActual());
+
+        // Agregamos el objetivo 'o1' que creaste arriba
+        partida1.agregarObjetivo(o1);
+        
+        // Creamos un par de personajes extra para probar el filtro de bandos
+        Personaje aliado1 = new Personaje(201, "Compañero", "Soporte", Bando.ALIADO, 80, 40, true);
+        Personaje enemigo1 = new Personaje(301, "Jefe", "Ataque", Bando.ENEMIGO, 100, 90, true);
+        
+        // Agregamos a la lista al 'lider' (que ya habias pasado a ENEMIGO), al aliado1 y al enemigo1
+        partida1.agregarPersonaje(lider); 
+        partida1.agregarPersonaje(aliado1);
+        partida1.agregarPersonaje(enemigo1);
+
+        System.out.println("Total de objetivos en partida: " + partida1.getObjetivos().size());
+        System.out.println("Total de personajes en partida: " + partida1.getPersonajes().size());
+
+        // Probamos los métodos de filtrado
+        ArrayList<Personaje> aliados = partida1.obtenerAliados();
+        ArrayList<Personaje> enemigos = partida1.obtenerEnemigos();
+        
+        System.out.println("Cantidad de aliados filtrados: " + aliados.size());
+        System.out.println("Cantidad de enemigos filtrados: " + enemigos.size());
     }
 }
