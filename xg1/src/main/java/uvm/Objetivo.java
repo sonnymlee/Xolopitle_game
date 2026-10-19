@@ -30,6 +30,9 @@ public class Objetivo {
     public void setDificultad(int dificultad) {
         this.dificultad = dificultad;
     }
+    public void setValor(int valor){
+        this.valor = valor;
+    }
     public boolean isCompletado() { return completado; }
     public void setCompletado(boolean completado) { this.completado = completado; }
     public void marcarCompletado() {

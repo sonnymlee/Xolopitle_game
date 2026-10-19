@@ -4,43 +4,48 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class InventarioRecursos {
-
-    private Map<TipoRecurso, Double> recursos;
+    
+    private Map<Tipor, Recurso> recursos;
 
     public InventarioRecursos(){
         this.recursos = new HashMap<>();
     }
 
-    public Map<TipoRecurso, Double> getRecursos(){
+    public Map<Tipor, Recurso> getRecursos(){
         return recursos;
     }
 
-    public void setRecursos(Map<TipoRecurso, Double> recursos){
+    public void setRecursos(Map<Tipor, Recurso> recursos){
         this.recursos = recursos;
     }
 
-    public void agregar(TipoRecurso tipo, double cantidad){
-        double actual = consultar(tipo);
-        recursos.put(tipo, actual + cantidad);
-    }
-
-    public void gastar(TipoRecurso tipo, double cantidad){
-        double actual = consultar(tipo);
-
-        if (actual >= cantidad){
-            recursos.put(tipo, actual - cantidad);
+    public void agregar(Tipor tipo, double cantidad){
+        if (recursos.containsKey(tipo)) {
+            recursos.get(tipo).agregar(cantidad);
+        } else {
+            recursos.put(tipo, new Recurso(recursos.size() + 1, tipo, cantidad, 1.0));
         }
     }
 
-    public double consultar(TipoRecurso tipo){
-        return recursos.getOrDefault(tipo, 0.0);
+    public boolean gastar(Tipor tipo, double cantidad){
+        if (recursos.containsKey(tipo)) {
+            return recursos.get(tipo).gastar(cantidad);
+        }
+        return false;
+    }
+
+    public double consultar(Tipor tipo){
+        if (recursos.containsKey(tipo)) {
+            return recursos.get(tipo).getCantidad();
+        }
+        return 0.0;
     }
 
     public double balance(){
         double total = 0;
 
-        for (double cantidad : recursos.values()){
-            total = total + cantidad;
+        for (Recurso r : recursos.values()){
+            total = total + r.getCantidad();
         }
 
         return total;

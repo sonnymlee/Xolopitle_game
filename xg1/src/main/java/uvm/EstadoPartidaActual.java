@@ -2,21 +2,21 @@ package uvm;
 
 public class EstadoPartidaActual {
     //atributos
-    private String estado;
+    private Estado estado;
     private double tiempoRestante;
     private int dia;
     private String fase;
 
     //metodos
     public EstadoPartidaActual(){
-        this.estado = "EN_CURSO";
+        this.estado = Estado.EN_CURSO;
         this.tiempoRestante = 0;
         this.dia = 1;
         this.fase = "INICIO";
     }
 
-    public String getEstado(){return estado;}
-    public void setEstado(String estado){this.estado = estado;}
+    public Estado getEstado(){return estado;}
+    public void setEstado(Estado estado){this.estado = estado;}
 
     public double getTiempoRestante(){return tiempoRestante;}
     public void setTiempoRestante(double tiempoRestante){this.tiempoRestante = tiempoRestante;}
@@ -32,14 +32,14 @@ public class EstadoPartidaActual {
     }
 
     public void pausar(){
-        estado = "PAUSADA";
+        estado = Estado.PAUSADA;
     }
 
     public void finalizar(){
-        estado = "FINALIZADA";
+        estado = Estado.FINALIZADA;
     }
 
     public boolean haTerminado(){
-        return estado.equals("FINALIZADA");
+        return estado == Estado.FINALIZADA;
     }
 }

@@ -28,15 +28,15 @@ public class Main {
         // Prueba de InventarioRecursos
         InventarioRecursos inventario = new InventarioRecursos();
 
-        inventario.agregar(TipoRecurso.DINERO, 1000);
+        inventario.agregar(Tipor.DINERO, 1000);
 
         System.out.println("\n\nInventarioRecursos:");
-        System.out.println("Dinero: " + inventario.consultar(TipoRecurso.DINERO));
+        System.out.println("Dinero: " + inventario.consultar(Tipor.DINERO));
         System.out.println("Balance: " + inventario.balance());
 
-        inventario.gastar(TipoRecurso.DINERO, 250);
+        inventario.gastar(Tipor.DINERO, 250);
 
-        System.out.println("Dinero despues de gastar: " + inventario.consultar(TipoRecurso.DINERO));
+        System.out.println("Dinero despues de gastar: " + inventario.consultar(Tipor.DINERO));
 
 
         // Prueba de EstadoJugadorActual
