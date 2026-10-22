@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://bmn33jri51qex"]
+
+[ext_resource type="Texture2D" uid="uid://bpciw06j52dle" path="res://assets/sprite/t1.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://ctiqe1bjyuj7q" path="res://scenes/player.gd" id="1_g2els"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2pkav"]
+radius = 6.0
+
+[sub_resource type="Animation" id="Animation_g2els"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_qhqgy"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 1]
+}
+
+[sub_resource type="Animation" id="Animation_qlg0r"]
+resource_name = "moverab"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.30593038, 0.40593037, 0.50593036),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 0, 1, 2, 0]
+}
+
+[sub_resource type="Animation" id="Animation_tuyoq"]
+resource_name = "moverar"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.30235225, 0.40235224, 0.50235224),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 3, 4, 5, 3]
+}
+
+[sub_resource type="Animation" id="Animation_dqkch"]
+resource_name = "mover"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.19999999, 0.3, 0.40000004, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 6, 7, 6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qlg0r"]
+_data = {
+&"RESET": SubResource("Animation_g2els"),
+&"idle": SubResource("Animation_qhqgy"),
+&"moverab": SubResource("Animation_qlg0r"),
+&"moverar": SubResource("Animation_tuyoq"),
+&"moverx": SubResource("Animation_dqkch")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fjrip"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_smehm"]
+animation = &"moverab"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ur7pv"]
+animation = &"moverar"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y4r1p"]
+animation = &"moverx"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d2wvv"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_60mlk"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_i4ail"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g2els"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qhqgy"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dqkch"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qlg0r"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2pkav"]
+states/Start/position = Vector2(102, 60)
+states/idle/node = SubResource("AnimationNodeAnimation_fjrip")
+states/idle/position = Vector2(239.1628, 65)
+states/moverab/node = SubResource("AnimationNodeAnimation_smehm")
+states/moverab/position = Vector2(380.13953, -14)
+states/moverar/node = SubResource("AnimationNodeAnimation_ur7pv")
+states/moverar/position = Vector2(492.13953, 60)
+states/moverx/node = SubResource("AnimationNodeAnimation_y4r1p")
+states/moverx/position = Vector2(501.13953, 148)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_d2wvv"), "idle", "moverx", SubResource("AnimationNodeStateMachineTransition_60mlk"), "moverx", "idle", SubResource("AnimationNodeStateMachineTransition_i4ail"), "idle", "moverab", SubResource("AnimationNodeStateMachineTransition_g2els"), "moverab", "idle", SubResource("AnimationNodeStateMachineTransition_qhqgy"), "idle", "moverar", SubResource("AnimationNodeStateMachineTransition_dqkch"), "moverar", "idle", SubResource("AnimationNodeStateMachineTransition_qlg0r")]
+graph_offset = Vector2(-19.860474, -2.2510529)
+
+[node name="player" type="CharacterBody2D" unique_id=124884391]
+script = ExtResource("1_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1457268695]
+shape = SubResource("CircleShape2D_2pkav")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=901588189]
+position = Vector2(0, -8)
+texture = ExtResource("1_3vyb7")
+flip_h = true
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1806680140]
+position = Vector2(0, 1)
+offset = Vector2(0, -10)
+zoom = Vector2(4, 4)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1579193991]
+libraries/ = SubResource("AnimationLibrary_qlg0r")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=453848267]
+tree_root = SubResource("AnimationNodeStateMachine_2pkav")
+anim_player = NodePath("../AnimationPlayer")
