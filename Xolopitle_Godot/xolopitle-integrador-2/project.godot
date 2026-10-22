@@ -20,6 +20,8 @@ GlobalEnums="*uid://bseabxbhf5cbu"
 
 [display]
 
+window/size/viewport_width=256
+window/size/viewport_height=240
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -52,4 +54,5 @@ right={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
