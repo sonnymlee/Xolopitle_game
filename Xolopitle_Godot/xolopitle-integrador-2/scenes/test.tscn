@@ -3123,5 +3123,3 @@ tile_set = SubResource("TileSet_2pkav")
 
 [node name="player" parent="." unique_id=124884391 instance=ExtResource("2_iyx0m")]
 position = Vector2(72, -27)
-
-[node name="player" parent="player" unique_id=1150094888 instance=ExtResource("2_iyx0m")]

@@ -1,0 +1,31 @@
+extends Node
+
+enum Bando{
+	ENEMIGO,
+	ALIADO,
+	NEUTRAL
+}
+
+enum Estado {
+	NO_INICIADA,
+	EN_CURSO,
+	PAUSADA,
+	FINALIZADA
+}
+
+enum TipoLocalizacion {
+	BASE,
+	REFUGIO,
+	ZONA_RIESGO,
+	OBJETIVO,
+	MERCADO
+}
+enum TipoRecuso {
+	DINERO,
+	CRIPTO,
+	INFLUENCIA,
+	ANONIMATO,
+	TIEMPO,
+	BUSQUEDA
+
+}
