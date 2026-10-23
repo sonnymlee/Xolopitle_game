@@ -13,6 +13,7 @@ enum State{
 
 @export var inv: Inv
 
+
 var state: State =State.IDLE
 var moveDirection: Vector2 = Vector2(0,0)
 
@@ -59,3 +60,6 @@ func update_animation() -> void:
 			animation_playback.travel("moverab")
 		State.MOVERAR:
 			animation_playback.travel("moverar")
+
+func collect(item):
+	inv.insert(item)

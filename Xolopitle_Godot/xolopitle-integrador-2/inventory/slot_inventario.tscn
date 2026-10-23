@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dlrqlhu7453il"]
 
-[ext_resource type="Script" uid="uid://idkp4r5ddnqp" path="res://inventory/Items/slot_inventario.gd" id="1_7uvmf"]
+[ext_resource type="Script" uid="uid://idkp4r5ddnqp" path="res://inventory/slot_inventario.gd" id="1_7uvmf"]
 [ext_resource type="Texture2D" uid="uid://ev3fniisa21j" path="res://assets/UiCozyFree.png/UiCozyFree.png" id="1_qcs0r"]
 
 [node name="slot_inventario" type="Panel" unique_id=2096403360]
@@ -25,6 +25,16 @@ offset_bottom = 12.0
 
 [node name="Panel" type="Panel" parent="CenterContainer" unique_id=996258034]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel" unique_id=1243672201]
+modulate = Color(0.34267965, 0.60082567, 0.6376725, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 22.0
+offset_bottom = 24.0
+scale = Vector2(0.25, 0.25)
+text = "99"
 
 [node name="ItemDisplay" type="Sprite2D" parent="CenterContainer/Panel" unique_id=1446925231]
 position = Vector2(0.7, 0.5)

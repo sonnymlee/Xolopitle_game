@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bpciw06j52dle" path="res://assets/sprite/t1.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://ctiqe1bjyuj7q" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Resource" uid="uid://cneattvcblmvn" path="res://inventory/PlayerInv.tres" id="2_qhqgy"]
-[ext_resource type="PackedScene" uid="uid://couh4m4vgydan" path="res://inventory/Items/inv_ui.tscn" id="4_dqkch"]
+[ext_resource type="PackedScene" uid="uid://couh4m4vgydan" path="res://inventory/inv_ui.tscn" id="4_dqkch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2pkav"]
 radius = 6.0
