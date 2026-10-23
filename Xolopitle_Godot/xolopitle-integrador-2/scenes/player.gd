@@ -10,8 +10,8 @@ enum State{
 @export var Velocidad: int = 300
 @export var Dinero: float = 100
 @export var Crypt: float = 100
-@export var Inventario = {"Herramienta": "Pinzas", "Arma": "Tubo"}
 
+@export var inv: Inv
 
 var state: State =State.IDLE
 var moveDirection: Vector2 = Vector2(0,0)

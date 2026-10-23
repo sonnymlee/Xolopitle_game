@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dlrqlhu7453il"]
+
+[ext_resource type="Script" uid="uid://idkp4r5ddnqp" path="res://inventory/Items/slot_inventario.gd" id="1_7uvmf"]
+[ext_resource type="Texture2D" uid="uid://ev3fniisa21j" path="res://assets/UiCozyFree.png/UiCozyFree.png" id="1_qcs0r"]
+
+[node name="slot_inventario" type="Panel" unique_id=2096403360]
+self_modulate = Color(1, 1, 0.9411765, 0)
+custom_minimum_size = Vector2(11, 12)
+offset_right = 11.0
+offset_bottom = 12.0
+script = ExtResource("1_7uvmf")
+
+[node name="Slot" type="Sprite2D" parent="." unique_id=1381816839]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_qcs0r")
+centered = false
+region_enabled = true
+region_rect = Rect2(164.59015, 100.45729, 22.854813, 24.042068)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=263720721]
+custom_minimum_size = Vector2(11.5, 12)
+layout_mode = 0
+offset_right = 11.5
+offset_bottom = 12.0
+
+[node name="Panel" type="Panel" parent="CenterContainer" unique_id=996258034]
+layout_mode = 2
+
+[node name="ItemDisplay" type="Sprite2D" parent="CenterContainer/Panel" unique_id=1446925231]
+position = Vector2(0.7, 0.5)
+scale = Vector2(0.4, 0.4)

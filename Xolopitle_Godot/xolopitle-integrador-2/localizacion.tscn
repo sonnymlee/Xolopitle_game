@@ -9355,4 +9355,4 @@ tile_map_data = PackedByteArray("AAANAAsAAAAcAB4AAAANAAwAAAAcAB8AAAAOAAsAAAAdAB4
 tile_set = SubResource("TileSet_f4qmu")
 
 [node name="player" parent="." unique_id=124884391 instance=ExtResource("2_m1buk")]
-position = Vector2(61, 56)
+position = Vector2(64, 60)

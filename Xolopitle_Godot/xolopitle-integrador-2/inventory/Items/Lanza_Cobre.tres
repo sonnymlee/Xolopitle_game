@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://c1pxjcjtstkm"]
+
+[ext_resource type="Script" uid="uid://f26fdp5cv3ek" path="res://inventory/inventory_item.gd" id="1_jv5ck"]
+[ext_resource type="Texture2D" uid="uid://dianrwue2tlad" path="res://assets/items/item115.png" id="2_6smdf"]
+
+[resource]
+script = ExtResource("1_jv5ck")
+name = "Lanza de cobre"
+texture = ExtResource("2_6smdf")
+metadata/_custom_type_script = "uid://f26fdp5cv3ek"

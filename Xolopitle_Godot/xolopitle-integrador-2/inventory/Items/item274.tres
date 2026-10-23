@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://0rgwdhx6s00o"]
+
+[ext_resource type="Script" uid="uid://f26fdp5cv3ek" path="res://inventory/inventory_item.gd" id="1_l4rdn"]
+[ext_resource type="Texture2D" uid="uid://dcuvtoxpeyiao" path="res://assets/items/item274.png" id="2_k6xjq"]
+
+[resource]
+script = ExtResource("1_l4rdn")
+name = "Item 274"
+texture = ExtResource("2_k6xjq")
