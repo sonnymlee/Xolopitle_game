@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bmraw20pos1fv"]
+
+[ext_resource type="Script" uid="uid://dmnao0thgttre" path="res://scenes/partida.gd" id="1_wwwrp"]
+[ext_resource type="PackedScene" uid="uid://bmn33jri51qex" path="res://scenes/player.tscn" id="2_wohmn"]
+[ext_resource type="PackedScene" uid="uid://dritd3p1ibbs" path="res://scenes/objetivo.tscn" id="3_qtwrc"]
+[ext_resource type="PackedScene" uid="uid://couh4m4vgydan" path="res://inventory/inv_ui.tscn" id="4_0fpbj"]
+[ext_resource type="PackedScene" uid="uid://mbjmb88324fh" path="res://scenes/stick_collectable.tscn" id="5_qtwrc"]
+
+[node name="Partida" type="Node2D" unique_id=439263725]
+script = ExtResource("1_wwwrp")
+escena_jugador = ExtResource("2_wohmn")
+escena_objetivo = ExtResource("3_qtwrc")
+escena_inventario = ExtResource("4_0fpbj")
+
+[node name="Personajes" type="Node2D" parent="." unique_id=1229093785]
+
+[node name="Objetivos" type="Node2D" parent="." unique_id=78818938]
+
+[node name="StickCollectable" parent="." unique_id=1015207682 instance=ExtResource("5_qtwrc")]
+position = Vector2(150, 100)

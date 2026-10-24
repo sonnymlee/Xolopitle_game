@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://de4k3x8g1q7u3" path="res://assets/tiles/hyptosis_tile-art-batch-1.png" id="1_bl13t"]
 [ext_resource type="PackedScene" uid="uid://bmn33jri51qex" path="res://scenes/player.tscn" id="2_iyx0m"]
 [ext_resource type="PackedScene" uid="uid://mbjmb88324fh" path="res://scenes/stick_collectable.tscn" id="3_iyx0m"]
+[ext_resource type="Script" uid="uid://by3akn4jlplm4" path="res://scenes/guardado.gd" id="5_j5jx5"]
+[ext_resource type="PackedScene" uid="uid://dritd3p1ibbs" path="res://scenes/objetivo.tscn" id="5_lpvoh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74lek"]
 texture = ExtResource("1_bl13t")
@@ -3133,3 +3135,9 @@ position = Vector2(20, -94)
 
 [node name="player" parent="." unique_id=124884391 instance=ExtResource("2_iyx0m")]
 position = Vector2(73, -35)
+
+[node name="Objetivo" parent="." unique_id=1429677155 instance=ExtResource("5_lpvoh")]
+position = Vector2(125, -59)
+
+[node name="Guardado" type="Node2D" parent="." unique_id=537277995]
+script = ExtResource("5_j5jx5")

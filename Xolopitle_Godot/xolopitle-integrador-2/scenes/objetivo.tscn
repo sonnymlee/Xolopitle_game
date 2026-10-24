@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dritd3p1ibbs"]
+
+[ext_resource type="Texture2D" uid="uid://bsy3djrj2f0og" path="res://assets/sprite/EXCLAMACIÓN.png" id="1_12cpa"]
+[ext_resource type="Script" uid="uid://c6k61bawd1cdu" path="res://scenes/objetivo.gd" id="1_ixotn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tb0aa"]
+
+[node name="Objetivo" type="Area2D" unique_id=1429677155]
+script = ExtResource("1_ixotn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1538767524]
+texture = ExtResource("1_12cpa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1317518545]
+shape = SubResource("CircleShape2D_tb0aa")
+
+[node name="Info" type="Label" parent="." unique_id=1231152248]
+offset_left = -36.0
+offset_top = -25.0
+offset_right = 36.0
+offset_bottom = -13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "DIFICULTAD: Dificil"
