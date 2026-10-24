@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://de4k3x8g1q7u3" path="res://assets/tiles/hyptosis_tile-art-batch-1.png" id="1_bl13t"]
 [ext_resource type="PackedScene" uid="uid://bmn33jri51qex" path="res://scenes/player.tscn" id="2_iyx0m"]
+[ext_resource type="PackedScene" uid="uid://mbjmb88324fh" path="res://scenes/stick_collectable.tscn" id="3_iyx0m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74lek"]
 texture = ExtResource("1_bl13t")
@@ -3121,5 +3122,14 @@ sources/1 = SubResource("TileSetAtlasSource_74lek")
 tile_map_data = PackedByteArray("AAAAAPn/AQAoAAAAAAAAAPr/AQAoAAEAAAAAAPv/AQAoAAIAAAAAAPz/AQAoAAMAAAAAAP3/AQAoAAQAAAAAAP7/AQAoAAUAAAAAAP//AQAoAAYAAAABAPn/AQApAAAAAAABAPr/AQApAAEAAAABAPv/AQApAAIAAAABAPz/AQApAAMAAAABAP3/AQApAAQAAAABAP7/AQApAAUAAAABAP//AQApAAYAAAACAPn/AQAqAAAAAAACAPr/AQAqAAEAAAACAPv/AQAqAAIAAAACAPz/AQAqAAMAAAACAP3/AQAqAAQAAAACAP7/AQAqAAUAAAACAP//AQAqAAYAAAADAPn/AQAqACYAAAADAPr/AQAqACcAAAADAPv/AQArAAIAAAADAPz/AQArAAMAAAADAP3/AQArAAQAAAADAP7/AQArAAUAAAADAP//AQArAAYAAAAEAPn/AQArACYAAAAEAPr/AQArACcAAAAEAPv/AQAsAAIAAAAEAPz/AQAsAAMAAAAEAP3/AQAsAAQAAAAEAP7/AQAsAAUAAAAEAP//AQAsAAYAAAAFAPn/AQAqACYAAAAFAPr/AQAqACcAAAAFAPv/AQAtAAIAAAAFAPz/AQAtAAMAAAAFAP3/AQAtAAQAAAAFAP7/AQAtAAUAAAAFAP//AQAtAAYAAAAGAPn/AQArACYAAAAGAPr/AQArACcAAAAGAPv/AQAuAAIAAAAGAPz/AQAuAAMAAAAGAP3/AQAuAAQAAAAGAP7/AQAuAAUAAAAGAP//AQAuAAYAAAAHAPn/AQAqACYAAAAHAPr/AQAqACcAAAAHAPv/AQAvAAIAAAAHAPz/AQAvAAMAAAAHAP3/AQAvAAQAAAAHAP7/AQAvAAUAAAAHAP//AQAvAAYAAAAIAPn/AQArACYAAAAIAPr/AQArACcAAAAIAPv/AQAwAAIAAAAIAPz/AQAwAAMAAAAIAP3/AQAwAAQAAAAIAP7/AQAwAAUAAAAIAP//AQAwAAYAAAA=")
 tile_set = SubResource("TileSet_2pkav")
 
+[node name="StickCollectable" parent="." unique_id=1015207682 instance=ExtResource("3_iyx0m")]
+position = Vector2(22, -37)
+
+[node name="StickCollectable2" parent="." unique_id=358608200 instance=ExtResource("3_iyx0m")]
+position = Vector2(124, -28)
+
+[node name="StickCollectable3" parent="." unique_id=29438610 instance=ExtResource("3_iyx0m")]
+position = Vector2(20, -94)
+
 [node name="player" parent="." unique_id=124884391 instance=ExtResource("2_iyx0m")]
-position = Vector2(72, -27)
+position = Vector2(73, -35)
