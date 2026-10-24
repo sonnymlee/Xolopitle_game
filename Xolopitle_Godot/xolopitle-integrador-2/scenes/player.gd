@@ -10,7 +10,7 @@ enum State{
 @export var Velocidad: int = 300
 @export var Dinero: float = 100
 @export var Crypt: float = 100
-
+@export var Bando: GlobalEnums.Bando
 @export var inv: Inv
 
 

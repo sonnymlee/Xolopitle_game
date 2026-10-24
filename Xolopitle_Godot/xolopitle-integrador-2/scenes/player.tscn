@@ -145,6 +145,7 @@ graph_offset = Vector2(-19.860474, -2.2510529)
 
 [node name="player" type="CharacterBody2D" unique_id=124884391]
 script = ExtResource("1_g2els")
+Bando = 2
 inv = ExtResource("2_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1457268695]
