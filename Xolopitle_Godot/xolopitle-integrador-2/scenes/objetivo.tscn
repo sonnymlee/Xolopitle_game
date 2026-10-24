@@ -15,10 +15,11 @@ texture = ExtResource("1_12cpa")
 shape = SubResource("CircleShape2D_tb0aa")
 
 [node name="Info" type="Label" parent="." unique_id=1231152248]
-offset_left = -36.0
-offset_top = -25.0
-offset_right = 36.0
-offset_bottom = -13.0
+offset_left = -11.000004
+offset_top = -19.0
+offset_right = 60.999996
+offset_bottom = -7.0
+scale = Vector2(0.3167489, 0.65764934)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 8
 text = "DIFICULTAD: Dificil"

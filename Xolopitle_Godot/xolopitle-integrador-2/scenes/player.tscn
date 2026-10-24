@@ -172,6 +172,7 @@ tree_root = SubResource("AnimationNodeStateMachine_2pkav")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="Inv_UI" parent="." unique_id=127929912 instance=ExtResource("4_dqkch")]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
