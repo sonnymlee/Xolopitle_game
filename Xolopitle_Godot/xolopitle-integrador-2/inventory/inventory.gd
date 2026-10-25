@@ -1,6 +1,5 @@
-extends Resource
-
 class_name Inv
+extends Resource
 
 signal update
 
