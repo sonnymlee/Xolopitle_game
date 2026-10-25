@@ -149,6 +149,7 @@ Bando = 2
 inv = ExtResource("2_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1457268695]
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_2pkav")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=901588189]

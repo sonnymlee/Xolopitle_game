@@ -6244,11 +6244,14 @@ position = Vector2(68, -90)
 [node name="Label" type="Label" parent="StickCollectable" unique_id=1894923431]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
-offset_top = 62.0
-offset_right = 88.0
-offset_bottom = 85.0
+offset_left = -53.999992
+offset_top = 50.0
+offset_right = 81.00001
+offset_bottom = 125.0
 scale = Vector2(0.24000064, 0.32000023)
-text = "i inventario"
+text = "i inventario
+g guardar partida
+c cargar partida"
 
 [node name="StickCollectable2" parent="." unique_id=358608200 instance=ExtResource("3_iyx0m")]
 position = Vector2(124, -106)
@@ -6261,7 +6264,7 @@ tile_map_data = PackedByteArray("AAAAAP7/AAA0ADYAAAAAAP//AAA0ADcAAAABAP7/AAA1ADY
 tile_set = SubResource("TileSet_q6l6t")
 
 [node name="player" parent="." unique_id=124884391 instance=ExtResource("2_iyx0m")]
-position = Vector2(73, -35)
+position = Vector2(49, -35)
 Velocidad = 90
 
 [node name="Objetivo" parent="." unique_id=1429677155 instance=ExtResource("5_lpvoh")]
